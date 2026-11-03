@@ -73,7 +73,7 @@ interface ProjectContextType {
   addTask: (t: Omit<Task, 'id' | 'createdAt'>) => void;
   updateTask: (id: string, updates: Partial<Task>) => void;
   deleteTask: (id: string) => void;
-  moveTaskStatus: (taskId: string, newStatus: Task['status']) => void;
+  moveTaskStatus: (taskId: string, newStatus: Task['status'], targetTaskId?: string) => void;
   
   // Nursery Actions
   addNurseryItem: (item: Omit<NurseryItem, 'id'>) => void;
@@ -324,10 +324,23 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
     setTasks(prev => prev.filter(t => t.id !== id));
   };
 
-  const moveTaskStatus = (taskId: string, newStatus: Task['status']) => {
-    setTasks(prev =>
-      prev.map(t => (t.id === taskId ? { ...t, status: newStatus } : t))
-    );
+  const moveTaskStatus = (taskId: string, newStatus: Task['status'], targetTaskId?: string) => {
+    setTasks(prev => {
+      const taskIndex = prev.findIndex(t => t.id === taskId);
+      if (taskIndex === -1) return prev;
+      const updatedTask = { ...prev[taskIndex], status: newStatus };
+      const withoutTask = prev.filter(t => t.id !== taskId);
+
+      if (targetTaskId && targetTaskId !== taskId) {
+        const targetIndex = withoutTask.findIndex(t => t.id === targetTaskId);
+        if (targetIndex !== -1) {
+          withoutTask.splice(targetIndex, 0, updatedTask);
+          return withoutTask;
+        }
+      }
+
+      return [...withoutTask, updatedTask];
+    });
   };
 
   // Nursery Actions

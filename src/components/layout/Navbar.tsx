@@ -60,12 +60,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenNewProject, onOpenNewTask 
       <div className="px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4">
         {/* Brand identity */}
         <div className="flex items-center gap-3 min-w-max">
-          <div className="w-10 h-10 rounded-xl bg-arabella-900 border border-gold-500/30 flex items-center justify-center shadow-sm">
-            <span className="font-serif text-2xl font-bold text-gold-400">A</span>
+          <div className="h-10 px-2.5 py-1 rounded-xl bg-white dark:bg-white/95 border border-stone-200 dark:border-stone-700/80 shadow-xs flex items-center justify-center">
+            <img 
+              src="/arabella-logo.png" 
+              alt="Arabella Landscape Limited" 
+              className="h-7 w-auto object-contain"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-serif text-lg font-bold tracking-tight text-arabella-950 dark:text-stone-100">
+              <span className="font-serif text-lg font-bold tracking-tight text-arabella-950 dark:text-stone-100 hidden sm:inline">
                 ARABELLA
               </span>
               <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-arabella-100 text-arabella-800 dark:bg-arabella-950 dark:text-arabella-300 border border-arabella-300 dark:border-arabella-700">

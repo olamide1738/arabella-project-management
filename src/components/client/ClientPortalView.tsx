@@ -42,8 +42,8 @@ export const ClientPortalView: React.FC = () => {
       <div className="p-6 rounded-2xl bg-gradient-to-r from-arabella-950 via-stone-900 to-[#122317] border border-gold-500/30 text-white shadow-xl space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-arabella-900 border border-gold-400/40 flex items-center justify-center font-serif text-2xl font-bold text-gold-400">
-              A
+            <div className="h-12 px-3 py-1.5 rounded-xl bg-white text-stone-900 border border-gold-400/40 flex items-center justify-center shadow-md">
+              <img src="/arabella-logo.png" alt="Arabella Landscape" className="h-8 w-auto object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-2">

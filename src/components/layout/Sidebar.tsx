@@ -111,7 +111,10 @@ export const Sidebar: React.FC = () => {
 
       {/* Studio Location & Footer Info */}
       <div className="p-3 border-t border-stone-200 dark:border-stone-800">
-        <div className="bg-gradient-to-br from-arabella-950 to-arabella-900 text-stone-100 rounded-xl p-3 border border-gold-500/20 shadow-xs space-y-2">
+        <div className="bg-gradient-to-br from-arabella-950 to-arabella-900 text-stone-100 rounded-xl p-3 border border-gold-500/20 shadow-xs space-y-2.5">
+          <div className="bg-white/95 rounded-lg py-1.5 px-2 flex items-center justify-center shadow-xs">
+            <img src="/arabella-logo.png" alt="Arabella" className="h-6 w-auto object-contain" />
+          </div>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-serif uppercase tracking-widest text-gold-400 font-semibold">
               Arabella Atelier

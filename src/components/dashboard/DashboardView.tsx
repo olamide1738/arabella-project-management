@@ -65,9 +65,10 @@ export const DashboardView: React.FC = () => {
         <div className="absolute right-0 top-0 w-96 h-96 bg-radial from-arabella-600/20 to-transparent blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-arabella-800/80 border border-gold-400/30 text-gold-300 text-xs font-medium">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Arabella Landscape & Building Design Workshop (BDW)</span>
+            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-white/95 text-stone-900 border border-gold-400/40 shadow-sm">
+              <img src="/arabella-logo.png" alt="Arabella Landscape" className="h-5 w-auto object-contain" />
+              <span className="text-stone-300">&bull;</span>
+              <span className="text-[11px] font-bold text-arabella-950 font-serif">Building Design Workshop (BDW)</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-stone-100">
               Shaping Spaces. Transforming Lives.

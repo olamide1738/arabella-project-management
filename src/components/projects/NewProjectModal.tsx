@@ -119,8 +119,8 @@ export const NewProjectModal: React.FC<NewProjectModalProps> = ({ onClose }) => 
         {/* Header */}
         <div className="p-4 sm:p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50 dark:bg-stone-900">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-arabella-900 text-gold-400 font-serif font-bold flex items-center justify-center">
-              A
+            <div className="h-8 px-2 py-0.5 rounded-lg bg-white dark:bg-white/95 border border-stone-200 dark:border-stone-700 flex items-center justify-center shadow-xs">
+              <img src="/arabella-logo.png" alt="Arabella" className="h-5 w-auto object-contain" />
             </div>
             <div>
               <h2 className="font-serif text-lg font-bold text-stone-900 dark:text-stone-100">
