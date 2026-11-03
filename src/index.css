@@ -38,3 +38,23 @@
   width: 5px;
   height: 5px;
 }
+
+/* Suppress Vercel Toolbar & Feedback Widget */
+vercel-live-feedback,
+#vercel-toolbar,
+[data-vercel-toolbar],
+[id^="vercel-"],
+[class*="vercel-toolbar"],
+div[data-testid="feedback-trigger"],
+iframe[src*="vercel.live"],
+vercel-toolbar {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
